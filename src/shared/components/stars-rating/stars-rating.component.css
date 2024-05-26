@@ -1,0 +1,14 @@
+.stars-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.stars-container .star {
+  font-size: 1.2rem;
+  color: #c4c4c4;
+}
+.stars-container .star.active ~ .star {
+  color: orange;
+}

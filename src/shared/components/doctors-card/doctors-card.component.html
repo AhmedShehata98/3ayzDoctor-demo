@@ -1,0 +1,40 @@
+<a
+  [href]="'doctor-details/' + doctorData.name"
+  class="relative flex flex-col items-center justify-center shadow-xl p-3 rounded-md"
+>
+  <figure class="w-44 aspect-square overflow-hidden">
+    <img
+      [src]="doctorData.cover || 'assets/images/doctor.png'"
+      [alt]="doctorData.name"
+      class="bg-center object-cover w-full"
+    />
+  </figure>
+  <button type="button" class="absolute top-0 right-[15%] rtl:left-[15%]">
+    <img src="assets/icons/share.svg" alt="share.svg" />
+  </button>
+  <div class="w-full flex flex-col items-center justify-center mb-2">
+    <h5 class="!text-xl capitalize text-blue-600">{{ doctorData.name }}</h5>
+    <p class="capitalize text-center opacity-75 text-blue-800">
+      {{ doctorData.description }}
+    </p>
+  </div>
+  <div class="w-full flex flex-col items-center justify-center mb-2">
+    <!-- <span>rate: {{ doctorData.rate }}</span> -->
+    <stars-rating [rate]="doctorData.rate"></stars-rating>
+    <small
+      >{{ doctorData.visitors }}
+      {{ "homepage.doctors-list.CARD.VISITORS" | translate }}</small
+    >
+  </div>
+  <h6
+    class="w-full flex items-center justify-center font-medium text-red-700 !text-xl my-3"
+  >
+    {{ doctorData.price | currency : "EGP" }}
+  </h6>
+  <button
+    type="button"
+    class="bg-blue-700 py-3 w-full rounded shadow text-white capitalize"
+  >
+    {{ "homepage.doctors-list.CARD.CTA_BTN" | translate }}
+  </button>
+</a>

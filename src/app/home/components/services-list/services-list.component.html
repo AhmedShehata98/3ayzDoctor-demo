@@ -1,0 +1,23 @@
+<section
+  class="container max-w-[90%] max-md:max-w-full max-lg:w-[95%] mx-auto mb-6"
+>
+  <div class="flex flex-col items-start justify-start mb-6">
+    <h3 class="!text-2xl capitalize font-medium text-blue-600">
+      {{ "homepage.services-list.TITLE" | translate }}
+    </h3>
+    <swiper-container
+      slides-per-view="3"
+      loop="true"
+      space-between="16"
+      autoplay="true"
+      class="w-full"
+      [breakpoints]="breakpoints"
+    >
+      @for(serv of services; track serv.id){
+      <swiper-slide class="mb-8 mt-2">
+        <service-card [service]="serv"></service-card>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

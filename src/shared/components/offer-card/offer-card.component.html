@@ -1,0 +1,45 @@
+<a
+  [href]="'/clinic/doctor' + offer.doctorName"
+  class="relative flex flex-col items-center justify-center shadow-xl rounded-md overflow-hidden p-3"
+>
+  <b class="text-xl text-blue-700 capitalize mb-5 py-3">{{ offer.category }}</b>
+  <span
+    class="absolute top-[5%] left-[-35%] flex items-center justify-center -rotate-45 bg-blue-600 text-white w-full h-7 font-medium uppercase"
+  >
+    {{ "homepage.offers-list.CARD.OFFER_BADGE" | translate }}
+  </span>
+
+  <div class="w-full flex flex-col items-center justify-center mb-5">
+    <p class="text-blue-600 capitalize !text-base">{{ offer.doctorName }}</p>
+    <p class="text-opacity-75 text-center mb-2">{{ offer.description }}</p>
+    <stars-rating [rate]="offer.rate"></stars-rating>
+    <small
+      >{{ offer.visitors }}
+      {{ "homepage.offers-list.CARD.VISITORS" | translate }}</small
+    >
+  </div>
+  <div class="flex flex-col items-center justify-end h-16">
+    <p *ngIf="offer.discount === 100" class="capitalize text-red-500">
+      {{ "homepage.offers-list.CARD.FREE_BADGE" | translate }}
+    </p>
+    <h5
+      class="text-red-700 text-center !text-base !font-medium"
+      [ngClass]="{ 'line-through text-opacity-40': offer.discount === 100 }"
+    >
+      {{ offer.price | currency : "EGP" }}
+    </h5>
+  </div>
+  <figure class="relative w-full h-[250px] rounded-md overflow-hidden">
+    <span
+      class="absolute right-0 top-6 px-4 py-2 bg-orange-400 !text-base uppercase text-white"
+      *ngIf="offer.discount === 100"
+    >
+      {{ "homepage.offers-list.CARD.FREE_BADGE" | translate }}
+    </span>
+    <img
+      [src]="offer.cover"
+      [alt]="offer.doctorName"
+      class="w-full h-full object-cover"
+    />
+  </figure>
+</a>

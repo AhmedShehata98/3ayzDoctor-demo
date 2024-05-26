@@ -1,0 +1,26 @@
+<section
+  class="container max-w-[90%] max-md:max-w-full max-lg:w-[95%] mx-auto mb-6"
+>
+  <div class="flex flex-col items-start justify-start mb-6">
+    <h3 class="!text-2xl capitalize font-medium text-blue-600 mb-0">
+      {{ "homepage.offers-list.TITLE" | translate }}
+    </h3>
+    <small class="mb-5">
+      {{ "homepage.offers-list.SUB_TITLE" | translate }}</small
+    >
+    <swiper-container
+      slides-per-view="4"
+      loop="true"
+      space-between="16"
+      autoplay="true"
+      class="w-full"
+      [breakpoints]="breakpoints"
+    >
+      @for(offer of offers; track offer.id){
+      <swiper-slide class="mb-8 mt-2">
+        <offer-card [offer]="offer"></offer-card>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>

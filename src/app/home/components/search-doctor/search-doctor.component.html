@@ -1,0 +1,75 @@
+<section class="container max-w-[90%] max-md:max-w-full max-lg:w-[95%] mx-auto">
+  <div class="w-full flex flex-col items-start justify-start">
+    <h3 class="!text-2xl capitalize font-medium">
+      {{ "homepage.search-doctor.TITLE" | translate }}
+    </h3>
+    <ul
+      class="w-full flex items-center justify-between gap-6 flex-wrap mt-3 mb-6"
+    >
+      <li
+        class="basis-[calc(26.6%-1.5rem)] max-md:basis-full flex items-center justify-between border border-slate-800 rounded-lg p-2"
+      >
+        <input
+          type="text"
+          name="search-doctor"
+          id="search-doctor"
+          [placeholder]="
+            'homepage.search-doctor.INPUTS.SEARCH_FOR_DOCTOR' | translate
+          "
+          class="flex-1 focus:outline-none border-none px-2"
+        />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </li>
+      <li
+        class="basis-[calc(26.6%-1.5rem)] max-md:basis-full flex items-center justify-between border border-slate-800 rounded-lg p-2"
+      >
+        <i class="fa-solid fa-stethoscope"></i>
+        <select
+          name="choose-specialty"
+          id="choose-specilaity"
+          value="choose-specialty"
+          class="flex-1 focus:outline-none border-none px-2"
+        >
+          <option value="choose-specialty">
+            {{ "homepage.search-doctor.INPUTS.CHOOSE_SPECIALTY" | translate }}
+          </option>
+          <!-- those is list of static dummy data -->
+          <option value="specialty-one">specialty one</option>
+          <option value="specialty-two">specialty two</option>
+          <option value="specialty-three">specialty three</option>
+          <option value="specialty-four">specialty four</option>
+          <option value="specialty-five">specialty five</option>
+        </select>
+      </li>
+      <li
+        class="basis-[calc(26.6%-1.5rem)] max-md:basis-full flex items-center justify-between border border-slate-800 rounded-lg p-2"
+      >
+        <i class="fa-solid fa-location-dot"></i>
+        <select
+          name="choose-location"
+          id="choose-location"
+          value="choose-location"
+          class="flex-1 focus:outline-none border-none px-2"
+        >
+          <option value="choose-location">
+            {{ "homepage.search-doctor.INPUTS.LOCATION" | translate }}
+          </option>
+          <!-- those is list of static dummy data -->
+          <option value="alexandria">alexandria</option>
+          <option value="cairo">cairo</option>
+          <option value="giza">giza</option>
+          <option value="ismaillia">ismaillia</option>
+        </select>
+      </li>
+      <button
+        type="button"
+        class="flex items-center justify-center gap-2 basis-[20%] max-md:basis-full px-3 py-1.5 rounded-md shadow-md bg-blue-700"
+      >
+        <i class="fa-solid fa-magnifying-glass text-base text-white"></i>
+        <p class="text-white font-medium capitalize !text-base !m-0">
+          {{ "homepage.search-doctor.INPUTS.SEARCH_BTN" | translate }}
+        </p>
+      </button>
+    </ul>
+  </div>
+</section>

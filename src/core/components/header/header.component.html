@@ -1,0 +1,145 @@
+<header class="app-header">
+  <div class="app-header__wrapper">
+    <div
+      class="max-lg:w-full flex items-center justify-center max-lg:justify-between px-3"
+    >
+      <div class="flex items-center justify-center">
+        <button
+          type="button"
+          class="text-3xl hidden max-lg:flex items-center justify-center"
+          (click)="toggleShowMobileMenu()"
+        >
+          <mat-icon
+            class="!w-9 !h-9 max-sm:!w-8 max-sm:!h-8 max-sm:!text-[1.5rem] !text-[2rem] !text-blue-700"
+          >
+            menu
+          </mat-icon>
+        </button>
+        <figure
+          class="flex items-center justify-center max-sm:w-8 max-sm:h-8 max-lg:w-12 max-lg:h-12 mx-3"
+        >
+          <img
+            src="assets/images/logo-newLogo-ar.png"
+            alt="logo.png"
+            class="object-cover w-full bg-center"
+          />
+        </figure>
+      </div>
+      <div class="max-lg:flex hidden items-center justify-center gap-2">
+        <button
+          class="text-blue-600 font-semibold capitalize text-xs truncate overflow-hidden hover:text-blue-400"
+          type="button"
+          (click)="toggleShowLoginModal()"
+        >
+          {{ "appHeader.SIGN_IN_BUTTON" | translate }}
+        </button>
+        <button type="button">
+          <mat-icon
+            class="text-blue-600 leading-[1.75rem] max-sm:leading-[2rem] text-xl max-sm:text-sm"
+            >search</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+    <!-- navigation-menu__hide => hide nav -->
+    <div
+      class="navigation-menu_wrapper max-lg:navigation-menu__mobile"
+      [ngClass]="{ 'max-lg:navigation-menu__hide': isHideMobileMenu }"
+    >
+      <nav class="navigation-links">
+        <a
+          [routerLink]="'/'"
+          class="nav-link group"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <span class="nav-link__icon-wrapper">
+            <mat-icon class="nav-link__icon">home</mat-icon>
+          </span>
+          <h4 class="nav-link__title">
+            {{ "appHeader.navLinks.HOME" | translate }}
+          </h4>
+        </a>
+        <a
+          [routerLink]="'/book-a-doctor'"
+          class="nav-link group"
+          routerLinkActive="active"
+        >
+          <span class="nav-link__icon-wrapper">
+            <mat-icon class="nav-link__icon">person</mat-icon>
+          </span>
+          <h4 class="nav-link__title">
+            {{ "appHeader.navLinks.BOOK_A_DOCTOR" | translate }}
+          </h4>
+        </a>
+        <a
+          [routerLink]="'/medical-service'"
+          class="nav-link group"
+          routerLinkActive="active"
+        >
+          <span class="nav-link__icon-wrapper">
+            <mat-icon class="nav-link__icon">healing</mat-icon>
+          </span>
+          <h4 class="nav-link__title">
+            {{ "appHeader.navLinks.MEDICAL_SERVICE" | translate }}
+          </h4>
+        </a>
+        <a
+          [routerLink]="'/contact-us'"
+          class="nav-link group"
+          routerLinkActive="active"
+        >
+          <span class="nav-link__icon-wrapper">
+            <mat-icon class="nav-link__icon">call</mat-icon>
+          </span>
+          <h4 class="nav-link__title">
+            {{ "appHeader.navLinks.CONTACT_US" | translate }}
+          </h4>
+        </a>
+        <a
+          [routerLink]="'/add-a-clinic'"
+          class="nav-link group border-dashed"
+          routerLinkActive="active"
+        >
+          <span class="nav-link__icon-wrapper">
+            <mat-icon class="nav-link__icon">add</mat-icon>
+          </span>
+          <h4 class="nav-link__title">
+            {{ "appHeader.navLinks.ADD_A_CLINIC" | translate }}
+          </h4>
+        </a>
+      </nav>
+      <div
+        class="max-lg:w-full flex items-center justify-center gap-14 max-lg:gap-5 max-sm:flex-col-reverse flex-row max-lg:border-t-2 border-gray-200 pt-3"
+      >
+        <button
+          type="button"
+          class="sign-in__btn"
+          (click)="toggleShowLoginModal()"
+        >
+          {{ "appHeader.SIGN_IN_BUTTON" | translate }}
+        </button>
+        <button
+          type="button"
+          class="flex max-sm:w-full max-lg:w-1/2 items-center justify-center gap-2 flex-row"
+        >
+          <span class="flex items-center justify-center text-blue-600">
+            <mat-icon class="nav-link__icon">public</mat-icon>
+          </span>
+          <select
+            name="lang"
+            id="lang"
+            class="focus:outline-none"
+            [value]="selectedLanguage"
+            [(ngModel)]="selectedLanguage"
+            (change)="onChangeLanguages($event)"
+          >
+            @for(locale of APP_LOCALES_LANGS; track locale.id){
+            <option [value]="locale.value">{{ locale.label }}</option>
+            }
+          </select>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

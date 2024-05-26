@@ -1,0 +1,12 @@
+@tailwind components;
+@layer components {
+  .footer {
+    @apply w-full bg-blue-600 py-14 max-sm:py-8 max-md:px-3 max-lg:px-6;
+  }
+  .footer__container {
+    @apply max-w-[calc(90%-5rem)] max-sm:max-w-full max-lg:max-w-[calc(100%-2.5rem)] max-md:gap-5 gap-20 mx-auto flex flex-wrap items-start justify-between;
+  }
+  .footer-link {
+    @apply text-white capitalize !text-sm flex items-center justify-start;
+  }
+}

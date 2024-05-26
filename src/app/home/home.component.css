@@ -1,0 +1,8 @@
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #3a37379d !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}

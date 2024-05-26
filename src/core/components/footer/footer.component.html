@@ -1,0 +1,162 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div
+      class="w-[calc(33.3%-5rem)] max-md:w-full max-lg:w-1/2 flex flex-wrap max-lg:flex-col items-start justify-center gap-16 max-md:gap-6"
+    >
+      <div class="max-lg:w-full w-1/2">
+        <h3
+          class="text-white capitalize mb-3 !text-2xl max-sm:!text-xl !font-medium"
+        >
+          {{ "footer.SLOGAN" | translate }}
+        </h3>
+        <ul>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SLOGAN_LINKS.CAREERS" | translate }}
+            </a>
+          </li>
+          <li class="footer-link">
+            <a href="#"> {{ "footer.SLOGAN_LINKS.PARTNERS" | translate }} </a>
+          </li>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SLOGAN_LINKS.BOOK_A_DOCTOR" | translate }}
+            </a>
+          </li>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SLOGAN_LINKS.LOGIN_AS_DOCTOR" | translate }}
+            </a>
+          </li>
+          <li class="footer-link mt-5 gap-3">
+            <a class="text-2xl" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02"
+                />
+              </svg>
+            </a>
+            <a class="text-2xl" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+                />
+              </svg>
+            </a>
+            <a class="text-2xl" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3
+          class="text-white capitalize mb-3 !text-2xl max-sm:!text-xl !font-medium"
+        >
+          {{ "footer.SERVICES" | translate }}
+        </h3>
+        <ul>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SERVICES_LINKS.TERMS_OF_SERVICE" | translate }}
+            </a>
+          </li>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SERVICES_LINKS.PRIVACY_TERMS" | translate }}
+            </a>
+          </li>
+          <li class="footer-link">
+            <a href="#">
+              {{ "footer.SERVICES_LINKS.CONTACT_US" | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="w-[66%] max-md:w-full max-lg:w-1/2 flex flex-col items-start justify-start"
+    >
+      <h3
+        class="text-white capitalize mb-3 !text-2xl max-sm:!text-xl !font-medium"
+      >
+        {{ "footer.SPECIALIZATIONS_OF_DOCTORS" | translate }}
+      </h3>
+      <div class="w-full flex items-center justify-start gap-7 flex-wrap">
+        @for(elem of specializationsOfDoctors; track elem) {
+        <ul
+          class="basis-[calc(16.6%-1.75rem)] max-sm:basis-[calc(100%-1.75rem)] max-md:basis-[calc(50%-1.75rem)] max-lg:basis-[calc(33.3%-1.75rem)] mb-4 gap-2"
+        >
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+          <li class="footer-link text-xs">
+            lorem Ipsum , lorem Ipsum lorem Ipsum
+          </li>
+        </ul>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center justify-center flex-col gap-5 mt-8 font-medium">
+    <img src="assets/images/WhitearabicLogo.png" alt="WhitearabicLogo.png" />
+    <p class="text-white capitalize text-sm">
+      © {{ "footer.COPY_RIGHTS" | translate }}
+    </p>
+  </div>
+</footer>

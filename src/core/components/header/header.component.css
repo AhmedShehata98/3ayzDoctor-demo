@@ -1,0 +1,40 @@
+@tailwind components;
+
+@layer components {
+  .app-header {
+    @apply relative z-30 flex items-center justify-between mx-auto shadow-md;
+  }
+  .app-header__wrapper {
+    @apply container h-20 max-md:h-12 max-lg:h-14 max-w-[90%] max-lg:max-w-full flex items-center justify-between max-lg:justify-between gap-6 py-2 mx-auto;
+  }
+  .navigation-menu_wrapper {
+    @apply w-full flex items-center justify-center gap-5;
+  }
+  .navigation-links {
+    @apply max-lg:w-full flex items-center justify-center gap-5 mx-auto max-lg:flex-col max-lg:items-start max-lg:justify-start;
+  }
+  .navigation-menu__mobile {
+    @apply absolute max-lg:top-full w-full h-screen bg-white flex-col items-start justify-start px-4 gap-2 transition-transform duration-300;
+  }
+  .navigation-menu__hide {
+    @apply -translate-y-[150%] pointer-events-none transition-transform duration-300;
+  }
+  .nav-link {
+    @apply flex items-center justify-center gap-1 py-3;
+  }
+  .nav-link.active {
+    @apply text-blue-600 font-medium;
+  }
+  .nav-link__icon-wrapper {
+    @apply flex items-center justify-center text-blue-600;
+  }
+  .nav-link__icon {
+    @apply !w-6 !h-6 !text-2xl !leading-5;
+  }
+  .nav-link__title {
+    @apply !m-0 capitalize !text-xs font-extrabold transition-colors duration-300 group-hover:text-blue-600;
+  }
+  .sign-in__btn {
+    @apply max-sm:min-w-full max-lg:w-1/2 min-w-[6.5rem] capitalize font-bold py-3 ms-10 px-3 max-lg:m-auto bg-blue-600 text-white rounded-md border-transparent transition-colors duration-300 hover:bg-transparent hover:border-2 hover:!border-blue-600 hover:text-blue-800;
+  }
+}

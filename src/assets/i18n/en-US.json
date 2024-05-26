@@ -1,0 +1,70 @@
+{
+  "appHeader": {
+    "navLinks": {
+      "HOME": "home",
+      "BOOK_A_DOCTOR": "book a doctor",
+      "MEDICAL_SERVICE": "medication service",
+      "CONTACT_US": "contact us",
+      "ADD_A_CLINIC": "add a clinic"
+    },
+    "SIGN_IN_BUTTON": "sign in"
+  },
+  "homepage": {
+    "search-doctor": {
+      "TITLE": "Welcome ، What do you want to look for today ?",
+      "INPUTS": {
+        "SEARCH_FOR_DOCTOR": "search for doctor",
+        "CHOOSE_SPECIALTY": "choose specialty",
+        "LOCATION": "location",
+        "SEARCH_BTN": "search"
+      }
+    },
+    "doctors-list": {
+      "TITLE": "Doctors you may like them",
+      "CARD": {
+        "VISITORS": "overall rating from visitors",
+        "CTA_BTN": "show"
+      }
+    },
+    "services-list": {
+      "TITLE": "Book Online Doctor with 3ayz Doctor"
+    },
+    "banner-list": {},
+    "offers-list": {
+      "TITLE": "Exclusive offers from medical services",
+      "SUB_TITLE": "enjoy healthy life deals and offers from 3ayz Doctor",
+      "CARD": {
+        "OFFER_BADGE": "offer",
+        "VISITORS": "overall rating from visitors",
+        "FREE_BADGE": "free"
+      }
+    },
+    "specialties-list": {
+      "TITLE": "Find doctors in top specialities"
+    },
+    "health-steps": {
+      "TITLE": "3 Steps to Better Health with 3ayzDoctor.com",
+      "SUB_TITLE": "Do this basic things and have a healthy life"
+    },
+    "comments": {
+      "TITLE": "What our users say about us ?"
+    }
+  },
+  "footer": {
+    "SLOGAN": "3ayz Doctor",
+    "SLOGAN_LINKS": {
+      "CAREERS": "Careers",
+      "PARTNERS": "Partners",
+      "BOOK_A_DOCTOR": "Book a doctor",
+      "LOGIN_AS_DOCTOR": "Login as Doctor"
+    },
+    "SERVICES": "Services",
+    "SERVICES_LINKS": {
+      "TERMS_OF_SERVICE": "Terms of service",
+      "PRIVACY_TERMS": "Privacy Terms",
+      "CONTACT_US": "Contact Us"
+    },
+    "SPECIALIZATIONS_OF_DOCTORS": "Specializations of doctors",
+    "COPY_RIGHTS": "Copyright 2024. All Rights Reserved"
+  }
+}

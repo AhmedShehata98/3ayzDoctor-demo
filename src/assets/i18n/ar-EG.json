@@ -1,0 +1,70 @@
+{
+  "appHeader": {
+    "navLinks": {
+      "HOME": "الرئيسية",
+      "BOOK_A_DOCTOR": "حجز دكتور",
+      "MEDICAL_SERVICE": "خدمة طبية",
+      "CONTACT_US": "اتصل بنا",
+      "ADD_A_CLINIC": "اضف عيادة"
+    },
+    "SIGN_IN_BUTTON": "تسجيل الدخول"
+  },
+  "homepage": {
+    "search-doctor": {
+      "TITLE": "مرحبا ، ما الذي تريد أن تبحث عنه اليوم ؟",
+      "INPUTS": {
+        "SEARCH_FOR_DOCTOR": "ابحث عن دكتور",
+        "CHOOSE_SPECIALTY": "اختار تخصص",
+        "LOCATION": "الموقع",
+        "SEARCH_BTN": "بحث"
+      }
+    },
+    "doctors-list": {
+      "TITLE": "اطباء قد تكون مهتم بهم",
+      "CARD": {
+        "VISITORS": "التقييم العام من زوار",
+        "CTA_BTN": "عرض"
+      }
+    },
+    "services-list": {
+      "TITLE": "احجز دكتور اونلاين"
+    },
+    "banner-list": {},
+    "offers-list": {
+      "TITLE": "اقوي العروض في المراكز الطبية",
+      "SUB_TITLE": "استفيد بافضل استكشف المزيد من العروض و تمتع بصحة جيدة",
+      "CARD": {
+        "OFFER_BADGE": "عرض",
+        "VISITORS": "التقييم العام من زوار",
+        "FREE_BADGE": "مجانا"
+      }
+    },
+    "specialties-list": {
+      "TITLE": "اختار دكتور حسب التخصص"
+    },
+    "health-steps": {
+      "TITLE": "3 خطوات لصحة افضل",
+      "SUB_TITLE": "افعل هذة الاشياء البسيطة واحصل على صحة افضل"
+    },
+    "comments": {
+      "TITLE": "ماذا يقول عملائنا ؟"
+    }
+  },
+  "footer": {
+    "SLOGAN": "عايز دكتور",
+    "SLOGAN_LINKS": {
+      "CAREERS": "وظائف",
+      "PARTNERS": "شركائنا",
+      "BOOK_A_DOCTOR": "حجز دكتور",
+      "LOGIN_AS_DOCTOR": "الدخول كطبيب"
+    },
+    "SERVICES": "خدمات",
+    "SERVICES_LINKS": {
+      "TERMS_OF_SERVICE": "الشروط و القوانين",
+      "PRIVACY_TERMS": "اتفاقية الخصوصية",
+      "CONTACT_US": "اتصل بنا"
+    },
+    "SPECIALIZATIONS_OF_DOCTORS": "تخصصات الاطباء",
+    "COPY_RIGHTS": "الحقوق 2024. كل الحقوق محفوظة"
+  }
+}

@@ -1,0 +1,13 @@
+<li class="flex flex-col p-2 shadow-lg rounded-md">
+  <figure class="w-full overflow-hidden rounded-md mb-1">
+    <img
+      [src]="service.cover"
+      [alt]="service.title"
+      class="bg-cover bg-center w-full"
+    />
+  </figure>
+  <h4 class="text-blue-700 !font-medium capitalize">{{ service.title }}</h4>
+  <p class="inline-block max-h-44 min-h-12 overflow-hidden px-3 opacity-90">
+    {{ service.description }}
+  </p>
+</li>

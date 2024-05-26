@@ -1,0 +1,18 @@
+<li
+  class="w-full flex flex-col items-center justify-center gap-2 shadow-xl rounded-md border py-3 px-6"
+>
+  <stars-rating [rate]="comment.rate"></stars-rating>
+  <h4 class="text-gray-900 capitalize !text-xl">{{ comment.comment }}</h4>
+  <div class="flex items-center justify-center gap-2 text-blue-600">
+    <p class="!text-xl capitalize leading-3">{{ comment.user.name }}</p>
+    <img
+      *ngIf="comment.user.avatar !== null"
+      [src]="comment.user.avatar"
+      [alt]="comment.user.name"
+    />
+    <i
+      class="fa-regular fa-circle-user !text-xl !leading-3"
+      *ngIf="comment.user.avatar === null"
+    ></i>
+  </div>
+</li>

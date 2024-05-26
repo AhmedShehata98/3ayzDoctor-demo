@@ -1,0 +1,24 @@
+<section
+  class="container max-w-[90%] max-md:max-w-full max-lg:w-[95%] mx-auto mb-6"
+>
+  <div class="flex flex-col items-start justify-start mb-6">
+    <h3 class="!text-2xl capitalize font-medium text-blue-600">
+      {{ "homepage.doctors-list.TITLE" | translate }}
+    </h3>
+    <swiper-container
+      class="w-full"
+      loop="true"
+      navigation="true"
+      space-between="16"
+      autoplay="true"
+      slides-per-view="4"
+      [breakpoints]="breakpoints"
+    >
+      @for(doctor of doctors ;track doctor.id){
+      <swiper-slide class="my-6">
+        <doctor-card [doctorData]="doctor"></doctor-card>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</section>
