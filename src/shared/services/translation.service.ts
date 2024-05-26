@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { Locale } from '../../enums/locale';
-
 @Injectable({
   providedIn: 'root',
 })
 export class TranslationService {
   public currentLanguage: Locale = Locale['en-US'];
 
-  constructor(private _translateService: TranslateService) {}
+  constructor(
+    private _translateService: TranslateService,
+    @Inject(DOCUMENT) private _document: Document
+  ) {}
 
   public setDefaultLanguage = (language: Locale) => {
     this.currentLanguage = language;
@@ -16,9 +19,9 @@ export class TranslationService {
   };
 
   public toggleDocumentLanguageAndDir = (lang: string, dir: string) => {
-    if (document) {
-      window.document.documentElement.lang = lang;
-      window.document.documentElement.dir = dir;
+    if (this._document) {
+      this._document.documentElement.lang = lang;
+      this._document.documentElement.dir = dir;
     }
   };
 }

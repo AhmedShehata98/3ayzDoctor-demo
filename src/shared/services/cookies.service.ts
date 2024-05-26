@@ -1,26 +1,20 @@
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CookiesService {
-  constructor() {}
+  constructor(private _cookieService: CookieService) {}
 
   public getCookie = (key: string): string | -1 => {
-    const cookiesList = document.cookie.split(';');
-    if (!cookiesList) return -1;
-    const foundedCookieIndex = cookiesList.findIndex((cookie) =>
-      cookie.includes(key)
-    );
-    if (foundedCookieIndex === -1) return -1;
-    const spitedTarget = cookiesList[foundedCookieIndex].split('=');
+    const cookieValue = this._cookieService.get(key);
+    if (!cookieValue) return -1;
 
-    if (foundedCookieIndex === -1) return -1;
-
-    return spitedTarget[1];
+    return cookieValue;
   };
 
   public setCookies(name: string, value: string): void {
-    document.cookie = `${name}=${value};`;
+    this._cookieService.set(name, value);
   }
 }

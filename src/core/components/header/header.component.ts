@@ -1,5 +1,5 @@
 import { NgClass, NgIf } from '@angular/common';
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ModalComponent } from '../../../shared/components/modal/modal.component';
 import { GlobalsModule } from '../../../shared/globals.module';
@@ -24,7 +24,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements OnInit {
   isHideMobileMenu = true;
   isShowLoginModal = false;
   isShowSignupModal = false;
@@ -47,7 +47,7 @@ export class HeaderComponent implements AfterViewInit {
     private _cookiesService: CookiesService
   ) {}
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     const lang = this._cookiesService.getCookie('lang');
 
     if (lang !== -1) {
