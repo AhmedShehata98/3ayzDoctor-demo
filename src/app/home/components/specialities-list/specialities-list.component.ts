@@ -41,7 +41,7 @@ export class SpecialitiesListComponent {
     },
   });
   public specialties: IService[] = [];
-  private specialtiesArabic: IService[] = [
+  private specialtiesEnglish: IService[] = [
     {
       id: '1',
       cover: 'assets/images/specialities/sp-dentist@2x.jpg',
@@ -81,7 +81,7 @@ export class SpecialitiesListComponent {
       description: ' Need to get operated? Find the right surgeon ',
     },
   ];
-  private specialtiesEnglish: IService[] = [
+  private specialtiesArabic: IService[] = [
     {
       id: '1',
       cover: 'assets/images/specialities/sp-dentist@2x.jpg',
