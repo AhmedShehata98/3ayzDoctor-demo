@@ -7,10 +7,10 @@
       loop="true"
       space-between="16"
       autoplay="true"
-      class="w-full"
+      class="w-full h-60 max-md:h-[5.5rem]"
     >
       @for(item of banners; track item.id){
-      <swiper-slide class="mb-8 mt-2">
+      <swiper-slide class="mb-8 max-md:mb-0 mt-2">
         <banner [imgSrc]="item.src"></banner>
       </swiper-slide>
       }

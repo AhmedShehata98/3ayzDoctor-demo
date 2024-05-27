@@ -8,7 +8,6 @@ import { SpecialitiesListComponent } from './components/specialities-list/specia
 import { HealthStepsListComponent } from './components/health-steps-list/health-steps-list.component';
 import { CommentsListComponent } from './components/comments-list/comments-list.component';
 import { GlobalsModule } from '../../shared/globals.module';
-import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',

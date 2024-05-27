@@ -2,9 +2,13 @@
   class="w-full flex flex-col items-center justify-center gap-2 shadow-xl rounded-md border py-3 px-6"
 >
   <stars-rating [rate]="comment.rate"></stars-rating>
-  <h4 class="text-gray-900 capitalize !text-xl">{{ comment.comment }}</h4>
+  <h4 class="text-gray-900 capitalize !text-xl max-md:!text-sm">
+    {{ comment.comment }}
+  </h4>
   <div class="flex items-center justify-center gap-2 text-blue-600">
-    <p class="!text-xl capitalize leading-3">{{ comment.user.name }}</p>
+    <p class="!text-xl max-md:!text-base capitalize leading-3">
+      {{ comment.user.name }}
+    </p>
     <img
       *ngIf="comment.user.avatar !== null"
       [src]="comment.user.avatar"
